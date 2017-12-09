@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Refresh Timeline</a>
+<div th:each="tweet : ${tweets}">
+    <p th:text="${tweet.content}"></p>
+    <h4 th:inline="text">[[${tweet.sentby}]]</h4>
+    <h5>[[${tweet.posteddate}]]</h5>
+</div>
+</body>
+</html>
